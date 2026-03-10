@@ -3,7 +3,7 @@ import { StatsSection } from "../components/StatsSection";
 import AboutSection from "../components/AboutSection";
 import { ProgramsSection } from "../components/ProgramsSection";
 import { ConsultationCTA } from "../components/ConsultationCTA";
-import { EventsSection } from "../components/EventsSection";
+
 import { TeamSection } from "../components/TeamSection";
 import { TestimonialsSection } from "../components/TestimonialsSection";
 import { BlogSection } from "../components/BlogSection";
@@ -234,7 +234,7 @@ export function HomePage() {
       <ContactSection />
       {/* <TeamSection /> */}
       <TestimonialsSection />
-      <EventsSection />
+    
      <BlogSection /> 
      
      

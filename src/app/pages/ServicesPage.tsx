@@ -2,7 +2,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Plus, X } from "lucide-react";
 import { useState } from "react";
-import { Footer } from "../components/Footer";
+
 
 const services = [
   // الخدمات الأساسية (للبطاقات التفاعلية)
@@ -172,7 +172,7 @@ export function ServicesPage() {
         </button>
         
       </div>
-      <Footer />
+     
 
     </div>
     
