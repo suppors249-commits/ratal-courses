@@ -75,7 +75,7 @@ export function HomePage() {
       
       <HeroSection />
       <StatsSection />
-      <TimelineSection />
+      {/* <TimelineSection /> */}
        
       <section className="py-3 flex justify-center bg-[#f2f9f5]">
   <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
