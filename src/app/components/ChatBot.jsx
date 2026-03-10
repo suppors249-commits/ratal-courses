@@ -12,8 +12,8 @@ export default function ChatBot() {
         onClick={() => setOpen(!open)}
         style={{
           position: "fixed",
-          bottom: "30px",
-          right: "30px",
+          bottom: "20px",
+          right: "10px",
           background: "#22275f",
           color: "white",
           width: "60px",
@@ -35,17 +35,17 @@ export default function ChatBot() {
         <div
           style={{
             position: "fixed",
-            bottom: "100px",
-            right: "30px",
-            width: "300px",
-            background: "#f0f7f3",
+            bottom: "90px",
+            right: "10px",
+            width: "240px",
+            background: "#f2f9f5",
             borderRadius: "15px",
             boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
             padding: "20px",
             zIndex: 9999,
           }}
         >
-          <h3 style={{ marginBottom: "10px" }}>👋  مرحباً بك في ريتال</h3>
+          <h3 style={{ marginBottom: "20px" }}>  مرحباً بك في ريتال</h3>
 
           <p style={{ fontSize: "14px", marginBottom: "15px" }}>
             كيف يمكنني مساعدتك؟
@@ -54,19 +54,19 @@ export default function ChatBot() {
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             
             <Link to="/services/scholarships" className="text-[#22275f]">
-              🎓 التقديم على المنح
+               التقديم على المنح
             </Link>
 
             <Link to="/services/Courses" className="text-[#22275f]">
-              📚 التسجيل في الكورسات
+               التسجيل في الكورسات
             </Link>
 
             <Link to="/services/CertificateServices" className="text-[#22275f]">
-              📄 استخراج الشهادات
+               استخراج الشهادات
             </Link>
 
             <Link to="/services/Consultation" className="text-[#22275f]">
-              🧠 الاستشارات التعليمية
+               الاستشارات التعليمية
             </Link>
 
             <a

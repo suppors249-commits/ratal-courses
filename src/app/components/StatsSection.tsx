@@ -21,14 +21,14 @@ const stats = [
     icon: UserCheck,
     number: 85,
     suffix: "+",
-    label: "مستشار أكاديمي",
+    label: "استشارات ",
     color: "#0d2b5e",
   },
   {
     icon: Building2,
     number: 150,
     suffix: "+",
-    label: "جامعة شريكة",
+    label: "جامعة ",
     color: "#0d2b5e",
   },
 ];
@@ -57,14 +57,14 @@ function StatCard({ stat, index, inView }: { stat: typeof stats[0]; index: numbe
 
   return (
     <div
-      className="flex flex-col items-center text-center p-8 rounded-3xl bg-[#f2f9f5] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+      className="flex flex-col items-center text-center p-3 rounded-3xl bg-[#f2f9f5] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
       style={{
         border: "1px solid #f2f9f5",
         animationDelay: `${index * 150}ms`,
       }}
     >
       <div
-        className="w-15 h-15 rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110"
+        className="w-10 h-10 rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110"
         style={{ background: `linear-gradient(135deg, ${stat.color}15, ${stat.color}30)` }}
       >
         <Icon size={26} style={{ color: stat.color }} strokeWidth={1} />
@@ -97,27 +97,26 @@ export function StatsSection() {
   }, []);
 
   return (
-    <section ref={ref} className="py-15 px-4" style={{ backgroundColor: "#f2f9f5" }}>
-      <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          
-          <h2 className="text-3xl font-black text-[#0d2b5e] mb-4">
-           شركاؤك في النجاح
-          </h2>
-          <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
-            على مدار أكثر من عقد من الزمان، نجحنا في مساعدة الآلاف من الطلاب على تحقيق أحلامهم الأكاديمية
-          </p>
-          <div className="w-50 h-1 rounded-full mx-auto mt-5" style={{ backgroundColor: "#0d2b5e" }} />
-        </div>
+  <section ref={ref} className="py-10 px-4" style={{ backgroundColor: "#f2f9f5" }}>
+  <div className="max-w-3xl mx-auto">
+    {/* Section Header */}
+    <div className="text-center mb-8">
+      <h2 className="text-2xl md:text-3xl font-black text-[#0d2b5e] mb-2">
+        شركاؤك في النجاح
+      </h2>
+      <p className="text-gray-500 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
+        على مدار أكثر من عقد من الزمان، نجحنا في مساعدة الآلاف من الطلاب على تحقيق أحلامهم الأكاديمية
+      </p>
+      <div className="w-16 h-1 rounded-full mx-auto mt-3" style={{ backgroundColor: "#0d2b5e" }} />
+    </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-3">
-          {stats.map((stat, index) => (
-            <StatCard key={index} stat={stat} index={index} inView={inView} />
-          ))}
-        </div>
-      </div>
-    </section>
+    {/* Stats Grid */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+      {stats.map((stat, index) => (
+        <StatCard key={index} stat={stat} index={index} inView={inView} />
+      ))}
+    </div>
+  </div>
+</section>
   );
 }

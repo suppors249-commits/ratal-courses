@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GraduationCap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
 const heroSlides = [
   {
     image:
@@ -47,7 +48,7 @@ function SearchCard() {
   };
 
   return (
-    <div className="w-full flex justify-center mt-16 px-4">
+    <div className="w-full flex justify-center px-4">
       <div className="bg-black/50 backdrop-blur-md rounded-3xl shadow-lg p-8 w-full max-w-md text-white flex flex-col gap-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold">حقق حلمك الآن</h2>
 
@@ -55,7 +56,7 @@ function SearchCard() {
           <div className="flex items-center gap-3 bg-black/30 rounded-xl px-4 py-2 cursor-pointer hover:bg-black/40">
             <GraduationCap size={20} />
             <select
-              className="bg-transparent w-full text-sm py-1 h-12 outline-none text-white"
+              className="bg-transparent w-full text-sm py-1 h-13 outline-none text-white"
               value={degree}
               onChange={handleChange}
             >
@@ -104,6 +105,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen min-h-[700px] overflow-hidden">
+      {/* Background Image */}
       <div
         className={`absolute inset-0 transition-opacity duration-500 ${
           isAnimating ? "opacity-60" : "opacity-100"
@@ -121,22 +123,27 @@ export function HeroSection() {
         className="absolute top-20 left-10 w-64 h-64 rounded-full opacity-10"
         style={{ background: "radial-gradient(circle, #ffffff, transparent)" }}
       />
-
       <div
         className="absolute bottom-20 right-20 w-96 h-96 rounded-full opacity-5"
         style={{ background: "radial-gradient(circle, #ffffff, transparent)" }}
       />
 
+      {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-start text-center px-4 pt-40 md:pt-48 lg:pt-56">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 max-w-4xl leading-tight">
-          {slide.headline}
-        </h1>
+        {/* النصوص المتغيرة */}
+        <div className="mb-12 max-w-2xl transition-all duration-500">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            {slide.headline}
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+            {slide.subheadline}
+          </p>
+        </div>
 
-        <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl leading-relaxed">
-          {slide.subheadline}
-        </p>
-
-        <SearchCard />
+        {/* SearchCard ثابتة */}
+        <div className="absolute bottom-12 w-full flex justify-center">
+          <SearchCard />
+        </div>
       </div>
     </section>
   );

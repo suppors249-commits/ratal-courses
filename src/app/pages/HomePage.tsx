@@ -30,7 +30,7 @@ const majors = [
     },
    
     {
-      title: "الأمن السيبراني",
+      title: " السيبراني",
       img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/الامن-السيبراني.png.webp",
     },
    
@@ -49,7 +49,7 @@ const majors = [
   
    
     {
-      title: "الذكاء الاصطناعي",
+      title: "Ai",
       img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/الذكاء-الاصطناعي.png.webp",
     },
   ];
@@ -77,7 +77,7 @@ export function HomePage() {
       <StatsSection />
        
       <section className="py-3 flex justify-center bg-[#f2f9f5]">
-  <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-full max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
+  <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
     {/* حدود البطاقة */}
     <div className="absolute top-0 left-0 w-full h-full  border-2 border-[#154734] rounded-3xl pointer-events-none"></div>
 
@@ -164,7 +164,7 @@ export function HomePage() {
               <img
                 src={major.img}
                 alt={major.title}
-                className="w-20 h-20 object-contain mb-4 text-[#0d2b5e]"
+                className="w-10 h-10 object-contain mb-4 text-[#0d2b5e]"
               />
 
               <h3 className="font-bold text-lg mb-1">

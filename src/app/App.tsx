@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+
 import { HomePage } from "./pages/HomePage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { ScholarshipsPage } from "./pages/ScholarshipsPage";
@@ -8,16 +10,16 @@ import AboutPage from "./pages/AboutPage";
 import UniversityDetail from "./pages/UniversityDetail";
 import ConsultationPage from "./pages/ConsultationPage";
 import CertificateServices from "./pages/CertificateServices";
-import { Footer } from "./components/Footer";
-
+import ScrollToTop from "./components/ScrollToTop"; // استدعاء المكون الجديد
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* الهيدر يظل ثابت */}
       <Header />
-     
-      {/* محتوى الصفحات */}
+
+      {/* ScrollToTop ensures new pages open from top */}
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -29,7 +31,6 @@ export default function App() {
         <Route path="/universities/:id" element={<UniversityDetail />} />
       </Routes>
 
-      {/* الفوتر يظل ثابت في كل الصفحات */}
       <Footer />
     </BrowserRouter>
   );
