@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
+    "prevercel-build": "chmod +x node_modules/.bin/vite",
     "vercel-build": "vite build"
   },
   "dependencies": {
