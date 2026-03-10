@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { LoadingScreen } from "./components/LoadingScreen";
@@ -34,6 +35,7 @@ export default function App() {
       </Routes>
 
       <Footer />
+      <SpeedInsights />
     </BrowserRouter>
   );
 }
