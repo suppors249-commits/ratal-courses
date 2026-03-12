@@ -79,8 +79,9 @@ export function HomePage() {
        
       <section className="py-3 flex justify-center bg-[#f2f9f5]">
   <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
-    {/* حدود البطاقة */}
-    <div className="absolute top-0 left-0 w-full h-full  border-2 border-[#154734] rounded-3xl pointer-events-none"></div>
+
+    {/* البوردر */}
+    <div className="absolute top-0 left-0 w-full h-full border-2 border-[#154734] rounded-3xl pointer-events-none"></div>
 
     {/* الصورة */}
     <div className="relative -mt-16 z-20">
@@ -91,7 +92,10 @@ export function HomePage() {
       />
     </div>
 
-    <h2 className="text-2xl md:text-3xl font-bold text-[#0d2b5e] mb-4">خدمات ريتال</h2>
+    {/* العنوان */}
+    <h2 className="text-2xl md:text-3xl font-bold text-[#0d2b5e] mb-4">
+      خدمات ريتال
+    </h2>
 
     {/* الخدمات */}
     <div className="grid md:grid-cols-2 gap-2 w-full">
@@ -99,27 +103,42 @@ export function HomePage() {
         <Link
           key={idx}
           to={`/services/${service.slug}`}
-          className="block bg-[#f2f9f5] p-3 rounded-xl shadow hover:shadow-md transition text-[#0d2b5e] font-medium text-center"
+          className="relative group overflow-hidden bg-[#f2f9f5] p-3 rounded-xl shadow transition text-[#0d2b5e] font-medium text-center"
         >
-          {service.title}
+
+          {/* الخلفية المتحركة */}
+          <span className="absolute inset-0 bg-[#154734] scale-x-0 origin-right transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+
+          {/* النص */}
+          <span className="relative z-10 group-hover:text-white transition">
+            {service.title}
+          </span>
+
         </Link>
       ))}
     </div>
 
     {/* زر المزيد */}
-    <div className="mt-4 z-10">
-      <Link
-        to="/services"
-        className="bg-[#154734] z-100  text-white px-5 py-2 rounded-full hover:bg-[#0d2b5e] transition"
-      >
-        المزيد
-      </Link>
-    </div>
-    <div className="relative -mt-7 z-100">
-      
-    </div>
+    <div className="mt-10 z-10">
+  <Link
+    to="/services"
+    className="relative group overflow-hidden px-7 py-2 rounded-full border border-[#154734] text-[#154734] font-medium"
+  >
+    
+    {/* الخلفية المتحركة من تحت */}
+    <span className="absolute inset-0 bg-[#154734] scale-y-0 origin-bottom rounded-full border transition-transform duration-500 group-hover:scale-y-100"></span>
+
+    {/* النص */}
+    <span className="relative z-10 group-hover:text-white transition">
+      المزيد
+    </span>
+
+  </Link>
+</div>
+
   </div>
-      </section>
+</section>
+
       <section className="py-12 bg-[#f2f9f5]">
   <div className="container mx-auto px-4">
 
@@ -150,22 +169,21 @@ export function HomePage() {
         <a
           key={index}
           href={major.link || "#"}
-          className="bg-white border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+          className="relative group overflow-hidden bg-white border rounded-xl p-6 flex flex-col items-center text-center shadow-sm"
         >
+
+          {/* الخلفية المتحركة من اليمين */}
+          <span className="absolute inset-0 bg-[#154734] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
 
           <img
             src={major.img}
             alt={major.title}
-            className="w-10 h-10 object-contain mb-4"
+            className="relative z-10 w-10 h-10 object-contain mb-4"
           />
 
-          <h3 className="font-bold text-lg mb-1">
+          <h3 className="relative z-10 font-bold text-lg mb-1 group-hover:text-white transition">
             {major.title}
           </h3>
-
-          <p className="text-[#154734] font-semibold">
-            سجل الآن
-          </p>
 
         </a>
       ))}
@@ -177,9 +195,16 @@ export function HomePage() {
     <div className="flex justify-center">
       <Link
         to="/about"
-        className="bg-[#154734] text-white px-8 py-3 rounded-full hover:bg-[#0d2b5e] transition"
+        className="relative group overflow-hidden px-8 py-3 rounded-full border border-[#154734] text-[#154734] font-semibold"
       >
-        المزيد عن ريتال
+
+        {/* الخلفية من اليمين */}
+        <span className="absolute inset-0 bg-[#154734] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+
+        <span className="relative z-10 group-hover:text-white transition">
+          المزيد عن ريتال
+        </span>
+
       </Link>
     </div>
 
@@ -197,14 +222,14 @@ export function HomePage() {
       {/* قسم الخدمات */}
       
       <section className="container mx-auto px-4 py-16 bg-[#f2f9f5]">
-     <div className="bg-[#0d2b5e] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+  <div className="bg-[#0d2b5e] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
 
     {/* الأيقونة + النص */}
     <div className="flex items-center gap-4 text-white">
       <img
         src="https://trueuniv.com/wp-content/uploads/2025/05/svgviewer-png-output.png"
         alt="icon"
-        className="w-12 h-12 text-white"
+        className="w-12 h-12"
       />
 
       <div>
@@ -220,9 +245,17 @@ export function HomePage() {
       href="https://api.whatsapp.com/send/?phone=905315016019"
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-[#f2f9f5] text-[#154734] px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+      className="relative group overflow-hidden px-6 py-3 rounded-full font-semibold border border-[#f2f9f5] text-[#154734] bg-[#f2f9f5]"
     >
-      تواصل معنا
+
+      {/* الخلفية المتحركة من اليمين */}
+      <span className="absolute inset-0 bg-[#154734] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+
+      {/* النص */}
+      <span className="relative z-10 group-hover:text-white transition">
+        تواصل معنا
+      </span>
+
     </a>
 
   </div>

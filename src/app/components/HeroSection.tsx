@@ -49,14 +49,14 @@ function SearchCard() {
 
   return (
     <div className="w-full flex justify-center px-4">
-      <div className="bg-black/50 backdrop-blur-md rounded-3xl shadow-lg p-8 w-full max-w-md text-white flex flex-col gap-6">
+      <div className="bg-black/50 backdrop-blur-md rounded-3xl shadow-lg p-9 w-full max-w-md text-white flex flex-col gap-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold">حقق حلمك الآن</h2>
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3 bg-black/30 rounded-xl px-4 py-2 cursor-pointer hover:bg-black/40">
             <GraduationCap size={20} />
             <select
-              className="bg-transparent w-full text-sm py-1 h-13 outline-none text-white"
+              className="bg-transparent w-full text-sm py-1 h-20 outline-none text-white"
               value={degree}
               onChange={handleChange}
             >
@@ -70,7 +70,7 @@ function SearchCard() {
 
         <button
           onClick={handleSearch}
-          className="flex items-center justify-center gap-2 bg-white text-black rounded-full py-2 px-6 font-semibold hover:scale-105 transition-transform"
+          className="flex items-center justify-center gap-20 bg-white text-black rounded-full py-3 px-6 font-semibold hover:scale-105 transition-transform"
         >
           ابحث
         </button>
@@ -120,7 +120,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/30" />
 
       <div
-        className="absolute top-20 left-10 w-64 h-64 rounded-full opacity-10"
+        className="absolute top-10 left-10 w-64 h-64 rounded-full opacity-10"
         style={{ background: "radial-gradient(circle, #ffffff, transparent)" }}
       />
       <div
@@ -128,7 +128,7 @@ export function HeroSection() {
         style={{ background: "radial-gradient(circle, #ffffff, transparent)" }}
       />
 
-      {/* Content */}
+      {/* Content */}                                                                                               
       <div className="relative z-10 h-full flex flex-col items-center justify-start text-center px-4 pt-40 md:pt-48 lg:pt-56">
         {/* النصوص المتغيرة */}
         <div className="mb-12 max-w-2xl transition-all duration-500">
