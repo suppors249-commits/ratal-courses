@@ -12,7 +12,7 @@ import UniversityDetail from "./pages/UniversityDetail";
 import ConsultationPage from "./pages/ConsultationPage";
 import CertificateServices from "./pages/CertificateServices";
 import ScrollToTop from "./components/ScrollToTop"; // استدعاء المكون الجديد
-import EgyptMap from "../components/EgyptMap";
+
 
 export default function App() {
   return (
