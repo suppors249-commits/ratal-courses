@@ -49,7 +49,7 @@ export function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
+    <section id="contact" className="py-20 px-4 bg-[#f2f9f5]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
@@ -121,7 +121,7 @@ export function ContactSection() {
                 </div>
 
                 {/* Gender & Country Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                   
                   <div>
                     <label className="block text-gray-700 text-sm font-semibold mb-2">الدولة *</label>
@@ -145,7 +145,7 @@ export function ContactSection() {
                       <option value="other">أخرى</option>
                     </select>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Email & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">

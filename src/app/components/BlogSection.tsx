@@ -46,7 +46,7 @@ export function BlogSection() {
     <section
       id="blog"
       className="py-20 px-4"
-      style={{ backgroundColor: "#f5f7fb" }}
+      style={{ backgroundColor: "#f2f9f5" }}
     >
       <div className="max-w-4xl mx-auto">
 

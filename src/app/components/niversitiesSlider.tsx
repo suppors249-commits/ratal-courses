@@ -177,7 +177,7 @@ export default function UniversitiesSlider() {
       slidesPerView={1}
       centeredSlides={true}
       loop={true}
-      autoplay={{ delay: 20000, disableOnInteraction: false }}
+      autoplay={{ delay: 1000, disableOnInteraction: false }}
       onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       breakpoints={{
         768: { slidesPerView: 2 },

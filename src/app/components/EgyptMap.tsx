@@ -56,7 +56,7 @@ export default function EgyptMap() {
 
           {/* اسم الدولة */}
           {active === index && (
-            <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-[#1f4385] text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap shadow-lg">
+            <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-[#154734] text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap shadow-lg">
               {branch.name}
             </div>
           )}
